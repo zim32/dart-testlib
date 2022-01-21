@@ -120,15 +120,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
-  testlib_repo:
-    dependency: transitive
-    description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "9bbe0b3e3c6ee2366b34888e6443f3e6dcd6c3a3"
-      url: "git@github.com:zim32/dart-testlib.git"
-    source: git
-    version: "1.0.0"
   typed_data:
     dependency: transitive
     description:
