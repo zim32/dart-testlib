@@ -4,11 +4,11 @@ import 'package:pub_semver/pub_semver.dart';
 
 Future<Package> package(Directory packageDir) {
   final libSources = [file("../src/testlib.cpp")];
+  final version = "1.0.0";
 
   return Package.create(
       name: "testlib",
-      version: Version.parse("1.0.0"),
-      installDir: packageDir,
+      version: Version.parse(version),
       buildParentPackage: (package) {
         package.providers.add(
           CppFlagsProvider(flags: {
@@ -23,7 +23,7 @@ Future<Package> package(Directory packageDir) {
         libName: "testlib",
         soName: "libtestlib.so.1",
         type: CppLibraryType.shared,
-        version: "1.0.0",
+        version: version,
       ),
       installTask: ExecTask(
         build: (builder, self) {
