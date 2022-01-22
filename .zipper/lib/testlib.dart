@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:packager/packager.dart';
 import 'package:pub_semver/pub_semver.dart';
 
-Future<Package> package(Directory packageDir) {
+Future<Package> package(Directory packageDir, Directory installDir) {
   final libSources = [file("../src/testlib.cpp")];
   final version = "1.0.0";
 
